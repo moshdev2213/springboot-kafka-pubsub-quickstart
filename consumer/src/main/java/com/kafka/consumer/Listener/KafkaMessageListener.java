@@ -9,8 +9,27 @@ import org.springframework.stereotype.Service;
 public class KafkaMessageListener {
     Logger log = LoggerFactory.getLogger(KafkaMessageListener.class);
 
-    @KafkaListener(topics = "${kafka.topic.name}")
-    public void consume(String message){
-        log.info("consumer online : {}",message);
+    @KafkaListener(topics = "${kafka.topic.name}" , groupId =
+    "${kafka.topic.groupId}")
+    public void consume01(String message){
+    log.info("consumer 01 online : {}",message);
     }
+
+    @KafkaListener(topics = "${kafka.topic.name}" , groupId =
+    "${kafka.topic.groupId}")
+    public void consume02(String message){
+    log.info("consumer 02 online : {}",message);
+    }
+
+    @KafkaListener(topics = "${kafka.topic.name}" , groupId =
+    "${kafka.topic.groupId}")
+    public void consume03(String message){
+    log.info("consumer 03 online : {}",message);
+    }
+
+    // @KafkaListener(topics = "${kafka.topic.name}", groupId = "${kafka.topic.groupId}", concurrency = "3")
+    // public void consume(String message) {
+    //     log.info("🧵 [{}] Consumed: {}", Thread.currentThread().getName(), message);
+    // }
+
 }

@@ -14,3 +14,4 @@ kafka:
     name: springboot-topic
     partitions: 3
     replicas: 1
+    groupId: my-consumer-group
