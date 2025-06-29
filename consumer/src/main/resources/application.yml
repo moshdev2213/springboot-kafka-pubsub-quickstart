@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: consumer
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: my-consumer-group
+
+server:
+  port: 9229
+
+kafka:
+  topic:
+    name: springboot-topic
+    partitions: 3
+    replicas: 1
