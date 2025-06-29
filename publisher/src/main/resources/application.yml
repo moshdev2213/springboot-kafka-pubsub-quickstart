@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: publisher
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+
+server:
+  port: 9219
+
+kafka:
+  topic:
+    name: springboot-topic
+    partitions: 3
+    replicas: 1
