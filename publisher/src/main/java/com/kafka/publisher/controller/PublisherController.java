@@ -2,8 +2,8 @@ package com.kafka.publisher.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kafka.publisher.dto.Customer;
 import com.kafka.publisher.service.KafkaMessagePublisher;
+import com.shared.dto.Customer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

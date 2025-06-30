@@ -7,7 +7,7 @@ import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Service;
 
 import com.kafka.publisher.config.KafkaTopicProperties;
-import com.kafka.publisher.dto.Customer;
+import com.shared.dto.Customer;
 
 @Service
 public class KafkaMessagePublisher {
