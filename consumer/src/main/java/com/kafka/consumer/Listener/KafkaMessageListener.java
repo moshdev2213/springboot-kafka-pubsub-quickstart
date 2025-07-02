@@ -3,6 +3,7 @@ package com.kafka.consumer.Listener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.kafka.annotation.TopicPartition;
 import org.springframework.stereotype.Service;
 
 import com.shared.dto.Customer;
@@ -12,8 +13,18 @@ import com.shared.dto.Customer;
 public class KafkaMessageListener {
     Logger log = LoggerFactory.getLogger(KafkaMessageListener.class);
 
-    @KafkaListener(topics = "${kafka.topic.name}", groupId = "${kafka.topic.groupId}")
-    public void consumeEvents(Customer customer) {
+    // @KafkaListener(topics = "${kafka.topic.name}", groupId = "${kafka.topic.groupId}")
+    // public void consumeEvents(Customer customer) {
+    //     log.info("Event consumer online : {}", customer.toString());
+    // }
+
+    // partition specific Listeners
+    @KafkaListener(
+        topics = "${kafka.topic.name}", 
+        groupId = "${kafka.topic.groupId}",
+        topicPartitions = {@TopicPartition(topic = "${kafka.topic.name}",partitions = {"2"})}
+    )
+    public void consumeMsg(String customer) {
         log.info("Event consumer online : {}", customer.toString());
     }
 
