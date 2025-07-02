@@ -23,7 +23,9 @@ public class KafkaMessagePublisher {
 
     public void sendMessageToTopic(String message) {
         String topicName = topicProperties.getName();
-        CompletableFuture<SendResult<String, Object>> future = kafkaTemplate.send(topicName, message);
+        
+        // sends message to a specific partition
+        CompletableFuture<SendResult<String, Object>> future = kafkaTemplate.send(topicName,2,null, message);
 
         future.whenComplete((result, ex) -> {
             if (ex == null) {
