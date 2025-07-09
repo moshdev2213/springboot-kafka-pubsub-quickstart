@@ -1,4 +1,4 @@
-# Spring Boot Kafka Publish-Subscribe Quickstart
+# Spring Boot, Kafka Quickstart
 
 <img width="5600" height="3152" alt="Image" src="https://github.com/user-attachments/assets/89393edf-e163-48df-b0d5-08be9be8d672" />
 
