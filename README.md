@@ -2,11 +2,11 @@
 
 <img width="5600" height="3152" alt="Image" src="https://github.com/user-attachments/assets/89393edf-e163-48df-b0d5-08be9be8d672" />
 
-This repository provides a hands-on quickstart guide to implementing **Apache Kafka**'s publish-subscribe messaging pattern using **Spring Boot**. It demonstrates how to set up separate producer (publisher) and consumer applications, communicate through a shared data transfer object, and manage Kafka locally.
-
 ---
 
 ## 🌟 Features & Concepts Demonstrated
+
+This repository provides a hands-on quickstart guide to implementing **Apache Kafka**'s publish-subscribe messaging pattern using **Spring Boot**. It demonstrates how to set up separate producer (publisher) and consumer applications, communicate through a shared data transfer object, and manage Kafka locally.
 
 * **Apache Kafka Fundamentals:** Understand topics, producers, and consumers.
 * **Spring for Apache Kafka:** Seamless integration of Kafka messaging into Spring Boot applications.
@@ -145,10 +145,11 @@ Each component (`consumer`, `publisher`, `shared-dto`) is a separate Maven modul
 -----
 
 ## 💡 How It Works
-
+---
 <img width="4320" height="2172" alt="Image" src="https://github.com/user-attachments/assets/721f7ded-c723-4709-8441-472ac93e63fa" />
 
- <br>
+
+---
 
   * The **`publisher`** application is responsible for creating and sending messages (events) to the Kafka `orders-topic`. These messages typically represent an "order" or a similar business event.
   * The **`consumer`** application continuously listens to the `orders-topic`. Whenever a new message arrives, the consumer processes it (e.g., logs it, stores it in a database, triggers another business logic).
